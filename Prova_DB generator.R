@@ -12,7 +12,7 @@ nteachers_23 <- SchoolDataIT::Get_nteachers_prov(Year = 2023)
 input_BB220901 <- SchoolDataIT::Get_BroadBand(Date = as.Date("2022-09-01"))
 School2mun23 <- SchoolDataIT::Get_School2mun(2023, input_Registry = Registry23)
 
-
+# Output dataset
 DB23_mun <- 
   SchoolDataIT::Set_DB(input_SchoolBuildings = input_DB23_MIUR,
                        input_nstud = input_nstud_23,
@@ -26,3 +26,20 @@ DB23_mun <-
                        SchoolBuildings_col_cut_thresh = nrow(input_DB23_MIUR),
                        SchoolBuildings_count_missing = T,
                        NA_autoRM = F)
+library(magrittr)
+# These variables are of no interest
+DB23_mun <- DB23_mun %>% dplyr::select(-.data$Other_disturbances_proximity,
+                           -.data$Other_specific_criticalities,
+                           -.data$Other, -.data$Other_specfy,
+                           -.data$Other_disturbances_proximity_MP,
+                           -.data$Other_specific_criticalities_MP, -.data$Other_MP, 
+                           -.data$Other_specfy_MP)  
+
+
+# export
+write.csv(DB23_mun, file = "DB23.csv")
+
+# BLANK field track - FILLED IN MANUALLY VIA EXCEL
+write.csv(data.frame(names(DB23_mun)), file = "field_track.csv")
+
+
