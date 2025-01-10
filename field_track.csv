@@ -1,288 +1,278 @@
-"","names.DB23_mun."
-"1","Province_code"
-"2","Province_initials"
-"3","Municipality_code"
-"4","Municipality_description"
-"5","Order"
-"6","M_Italian_2"
-"7","M_Mathematics_2"
-"8","S_Italian_2"
-"9","S_Mathematics_2"
-"10","C_Italian_2"
-"11","C_Mathematics_2"
-"12","M_English_L_5"
-"13","M_English_R_5"
-"14","M_Italian_5"
-"15","M_Mathematics_5"
-"16","S_English_L_5"
-"17","S_English_R_5"
-"18","S_Italian_5"
-"19","S_Mathematics_5"
-"20","C_English_L_5"
-"21","C_English_R_5"
-"22","C_Italian_5"
-"23","C_Mathematics_5"
-"24","M_English_L_8"
-"25","M_English_R_8"
-"26","M_Italian_8"
-"27","M_Mathematics_8"
-"28","S_English_L_8"
-"29","S_English_R_8"
-"30","S_Italian_8"
-"31","S_Mathematics_8"
-"32","C_English_L_8"
-"33","C_English_R_8"
-"34","C_Italian_8"
-"35","C_Mathematics_8"
-"36","M_Italian_10"
-"37","M_Mathematics_10"
-"38","S_Italian_10"
-"39","S_Mathematics_10"
-"40","C_Italian_10"
-"41","C_Mathematics_10"
-"42","M_English_L_13"
-"43","M_English_R_13"
-"44","M_Italian_13"
-"45","M_Mathematics_13"
-"46","S_English_L_13"
-"47","S_English_R_13"
-"48","S_Italian_13"
-"49","S_Mathematics_13"
-"50","C_English_L_13"
-"51","C_English_R_13"
-"52","C_Italian_13"
-"53","C_Mathematics_13"
-"54","nbuildings"
-"55","Undisturbed_context"
-"56","Dumps_proximity"
-"57","Pollutant_industries_proximity"
-"58","Polluted_waters_proximity"
-"59","Air_pollution_sources_proximity"
-"60","Acoustic_pollution_sources_proximity"
-"61","Electromagnetic_radiation_sources_proximity"
-"62","Graveyards_proximity"
-"63","Other_disturbances_proximity"
-"64","School_area_specific_criticalities"
-"65","Layby_absence"
-"66","Unenclosed_area"
-"67","Large_traffic"
-"68","Railway_traffic"
-"69","Abandoned_industries"
-"70","Decayed_urban_area"
-"71","Hazardous_industries_proximity"
-"72","Other_specific_criticalities"
-"73","School_bus"
-"74","Urban_public_transport"
-"75","Interurban_public_transport"
-"76","Railway_transport"
-"77","Private_transport"
-"78","Disabled_people_transport"
-"79","Bicycle_lane"
-"80","Other"
-"81","Hydrogeological_restrictions"
-"82","Landscape_restrictions"
-"83","Protected_building"
-"84","Cultural_heritage_restrictions"
-"85","National_seismic_classification"
-"86","School_area_surface"
-"87","Free_area_surface"
-"88","Gross_building_volume"
-"89","Floors_number"
-"90","Teaching_spaces"
-"91","Classrooms"
-"92","IT_classrooms"
-"93","Technology_classrooms"
-"94","Collective_spaces"
-"95","Auditorium"
-"96","Canteen"
-"97","Gymnasium"
-"98","Swimming_pool"
-"99","Administration_spaces"
-"100","Architectural_barriers_overcoming_devices"
-"101","External_access_ramps"
-"102","Stairs_up_to_standard"
-"103","Disabled_people_elevator"
-"104","Elevator_stairlift"
-"105","Disabled_people_compliant_sanitation"
-"106","Weelchair_accessible_doors_width"
-"107","Internal_routes"
-"108","External_routes"
-"109","Other_devices"
-"110","School_use"
-"111","Other_uses"
-"112","Building_age"
-"113","Building_period"
-"114","Adaptation_age"
-"115","Adaptation_period"
-"116","Static_testing_certification"
-"117","Seismic_design"
-"118","Seismic_adaptation"
-"119","Seismic_improvement"
-"120","Heating_system"
-"121","Centralised_fuel_oil_system"
-"122","Centralised_diesel_oil_system"
-"123","Centralised_methane_system"
-"124","Centralised_LPG_system"
-"125","Autonomous_electric_heating_elements"
-"126","District_heating"
-"127","Ventilation_conditioning"
-"128","Solar_heating_system"
-"129","Other_heating_system"
-"130","Energy_saving_devices"
-"131","Double_windows_glazing"
-"132","Covers_insulation"
-"133","Outside_walls_insulation"
-"134","Heating_system_zoning"
-"135","Photovoltaic_system"
-"136","Acoustic_insulation"
-"137","Acoustic_insulation_outside_noise"
-"138","Internal_insulation"
-"139","Different_floors_internal_insulation"
-"140","Other_specfy"
-"141","Inner_area"
-"142","A_mun"
-"143","B_mun"
-"144","C_mun"
-"145","D_mun"
-"146","E_mun"
-"147","F_mun"
-"148","Undisturbed_context_MP"
-"149","Dumps_proximity_MP"
-"150","Pollutant_industries_proximity_MP"
-"151","Polluted_waters_proximity_MP"
-"152","Air_pollution_sources_proximity_MP"
-"153","Acoustic_pollution_sources_proximity_MP"
-"154","Electromagnetic_radiation_sources_proximity_MP"
-"155","Graveyards_proximity_MP"
-"156","Other_disturbances_proximity_MP"
-"157","School_area_specific_criticalities_MP"
-"158","Layby_absence_MP"
-"159","Unenclosed_area_MP"
-"160","Large_traffic_MP"
-"161","Railway_traffic_MP"
-"162","Abandoned_industries_MP"
-"163","Decayed_urban_area_MP"
-"164","Hazardous_industries_proximity_MP"
-"165","Other_specific_criticalities_MP"
-"166","School_bus_MP"
-"167","Urban_public_transport_MP"
-"168","Interurban_public_transport_MP"
-"169","Railway_transport_MP"
-"170","Private_transport_MP"
-"171","Disabled_people_transport_MP"
-"172","Bicycle_lane_MP"
-"173","Other_MP"
-"174","Hydrogeological_restrictions_MP"
-"175","Landscape_restrictions_MP"
-"176","Protected_building_MP"
-"177","Cultural_heritage_restrictions_MP"
-"178","National_seismic_classification_MP"
-"179","School_area_surface_MP"
-"180","Free_area_surface_MP"
-"181","Gross_building_volume_MP"
-"182","Floors_number_MP"
-"183","Teaching_spaces_MP"
-"184","Classrooms_MP"
-"185","IT_classrooms_MP"
-"186","Technology_classrooms_MP"
-"187","Collective_spaces_MP"
-"188","Auditorium_MP"
-"189","Canteen_MP"
-"190","Gymnasium_MP"
-"191","Swimming_pool_MP"
-"192","Administration_spaces_MP"
-"193","Architectural_barriers_overcoming_devices_MP"
-"194","External_access_ramps_MP"
-"195","Stairs_up_to_standard_MP"
-"196","Disabled_people_elevator_MP"
-"197","Elevator_stairlift_MP"
-"198","Disabled_people_compliant_sanitation_MP"
-"199","Weelchair_accessible_doors_width_MP"
-"200","Internal_routes_MP"
-"201","External_routes_MP"
-"202","Other_devices_MP"
-"203","School_use_MP"
-"204","Other_uses_MP"
-"205","Building_age_MP"
-"206","Building_period_MP"
-"207","Adaptation_age_MP"
-"208","Adaptation_period_MP"
-"209","Static_testing_certification_MP"
-"210","Seismic_design_MP"
-"211","Seismic_adaptation_MP"
-"212","Seismic_improvement_MP"
-"213","Heating_system_MP"
-"214","Centralised_fuel_oil_system_MP"
-"215","Centralised_diesel_oil_system_MP"
-"216","Centralised_methane_system_MP"
-"217","Centralised_LPG_system_MP"
-"218","Autonomous_electric_heating_elements_MP"
-"219","District_heating_MP"
-"220","Ventilation_conditioning_MP"
-"221","Solar_heating_system_MP"
-"222","Other_heating_system_MP"
-"223","Energy_saving_devices_MP"
-"224","Double_windows_glazing_MP"
-"225","Covers_insulation_MP"
-"226","Outside_walls_insulation_MP"
-"227","Heating_system_zoning_MP"
-"228","Photovoltaic_system_MP"
-"229","Acoustic_insulation_MP"
-"230","Acoustic_insulation_outside_noise_MP"
-"231","Internal_insulation_MP"
-"232","Different_floors_internal_insulation_MP"
-"233","Other_specfy_MP"
-"234","Inner_area_MP"
-"235","A_mun_MP"
-"236","B_mun_MP"
-"237","C_mun_MP"
-"238","D_mun_MP"
-"239","E_mun_MP"
-"240","F_mun_MP"
-"241","Students_grade_1"
-"242","Classes_grade_1"
-"243","Students_per_class_1"
-"244","Students_grade_2"
-"245","Classes_grade_2"
-"246","Students_per_class_2"
-"247","Students_grade_3"
-"248","Classes_grade_3"
-"249","Students_per_class_3"
-"250","Students_grade_4"
-"251","Classes_grade_4"
-"252","Students_per_class_4"
-"253","Students_grade_5"
-"254","Classes_grade_5"
-"255","Students_per_class_5"
-"256","Students_grade_6"
-"257","Classes_grade_6"
-"258","Students_per_class_6"
-"259","Students_grade_7"
-"260","Classes_grade_7"
-"261","Students_per_class_7"
-"262","Students_grade_8"
-"263","Classes_grade_8"
-"264","Students_per_class_8"
-"265","Students_grade_9"
-"266","Classes_grade_9"
-"267","Students_per_class_9"
-"268","Students_grade_10"
-"269","Classes_grade_10"
-"270","Students_per_class_10"
-"271","Students_grade_11"
-"272","Classes_grade_11"
-"273","Students_per_class_11"
-"274","Students_grade_12"
-"275","Classes_grade_12"
-"276","Students_per_class_12"
-"277","Students_grade_13"
-"278","Classes_grade_13"
-"279","Students_per_class_13"
-"280","Tot_Students"
-"281","Tot_Classes"
-"282","Students_per_class_Tot"
-"283","Availability"
-"284","BB_Activation_status"
-"285","Tot_teachers"
-"286","Teachers_per_student"
-"287","Teachers_per_class"
+﻿Variable;Description
+A_mun;Municipality classified as infrastructural pole
+A_mun_MP;Proportion of missing items for the field in scope
+Abandoned_industries;Proportion of school buildings lying close to abandoned industries
+Abandoned_industries_MP;Proportion of missing items for the field in scope
+Acoustic_insulation;Proportion of school buildings generally insulated from noise 
+Acoustic_insulation_MP;Proportion of missing items for the field in scope
+Acoustic_insulation_outside_noise;Proportion of school buildings insulated from outside noise
+Acoustic_insulation_outside_noise_MP;Proportion of missing items for the field in scope
+Acoustic_pollution_sources_proximity;Proportion of school buildings lying close to acoustic pollution sources
+Acoustic_pollution_sources_proximity_MP;Proportion of missing items for the field in scope
+Adaptation_age;Average adaptation age of school buindings
+Adaptation_age_MP;Proportion of missing items for the field in scope
+Adaptation_period;Most frequent adaptation period class of school buildings
+Adaptation_period_MP;Proportion of missing items for the field in scope
+Administration_spaces;Proportion of school buildings provided with administration spaces
+Administration_spaces_MP;Proportion of missing items for the field in scope
+Air_pollution_sources_proximity;Proportion of school buildingss lying close to air pollution sources
+Air_pollution_sources_proximity_MP;Proportion of missing items for the field in scope
+Architectural_barriers_overcoming_devices;Proportion of school buildings provided with devices to overcome architectural barriers
+Architectural_barriers_overcoming_devices_MP;Proportion of missing items for the field in scope
+Auditorium;Proportion of school buildings provided with auditoria
+Auditorium_MP;Proportion of missing items for the field in scope
+Autonomous_electric_heating_elements;Proportion of school buildings provided with autonomous electric heating systems
+Autonomous_electric_heating_elements_MP;Proportion of missing items for the field in scope
+Availability;Proportion of schools for which students counts are available
+B_mun;Municipality classified as inter-municipality infrastructural pole, i.e. belonging to a cluster of neighbouring municipality which taken together account for an infrastructural pole
+B_mun_MP;Proportion of missing items for the field in scope
+BB_Activation_status;Percentage of schools in which broadband connection is available at the beginning of the school year
+Bicycle_lane;Proportion of school buildings lying close to bycicle lanes
+Bicycle_lane_MP;Proportion of missing items for the field in scope
+Building_age;Average building age of school buildings
+Building_age_MP;Proportion of missing items for the field in scope
+Building_period;Most frequent building period class of school buildings
+Building_period_MP;Proportion of missing items for the field in scope
+C_English_L_13;Students coverage in Invalsi tests
+C_English_L_5;Students coverage in Invalsi tests
+C_English_L_8;Students coverage in Invalsi tests
+C_English_R_13;Students coverage in Invalsi tests
+C_English_R_5;Students coverage in Invalsi tests
+C_English_R_8;Students coverage in Invalsi tests
+C_Italian_10;Students coverage in Invalsi tests
+C_Italian_13;Students coverage in Invalsi tests
+C_Italian_2;Students coverage in Invalsi tests
+C_Italian_5;Students coverage in Invalsi tests
+C_Italian_8;Students coverage in Invalsi tests
+C_Mathematics_10;Students coverage in Invalsi tests
+C_Mathematics_13;Students coverage in Invalsi tests
+C_Mathematics_2;Students coverage in Invalsi tests
+C_Mathematics_5;Students coverage in Invalsi tests
+C_Mathematics_8;Students coverage in Invalsi tests
+C_mun;Municipality classified as belt area, i.e. lying within a road travel time of about 27 minutes from the closest infrastructural pole
+C_mun_MP;Proportion of missing items for the field in scope
+Canteen;Proportion of school buildings with a school restaurant/canteen
+Canteen_MP;Proportion of missing items for the field in scope
+Centralised_diesel_oil_system;Proportion of school buildings provided with centralised diesel heating systems
+Centralised_diesel_oil_system_MP;Proportion of missing items for the field in scope
+Centralised_fuel_oil_system;Proportion of school buildings provided with centralised fuel heating systems
+Centralised_fuel_oil_system_MP;Proportion of missing items for the field in scope
+Centralised_LPG_system;Proportion of school buildings provided with centralised liquid propane heating systems
+Centralised_LPG_system_MP;Proportion of missing items for the field in scope
+Centralised_methane_system;Proportion of school buildings provided with centralised methane heating systems
+Centralised_methane_system_MP;Proportion of missing items for the field in scope
+Classes_grade_1;Average number of classrooms of the grade in scope per municipality
+Classes_grade_10;Average number of classrooms of the grade in scope per municipality
+Classes_grade_11;Average number of classrooms of the grade in scope per municipality
+Classes_grade_12;Average number of classrooms of the grade in scope per municipality
+Classes_grade_13;Average number of classrooms of the grade in scope per municipality
+Classes_grade_2;Average number of classrooms of the grade in scope per municipality
+Classes_grade_3;Average number of classrooms of the grade in scope per municipality
+Classes_grade_4;Average number of classrooms of the grade in scope per municipality
+Classes_grade_5;Average number of classrooms of the grade in scope per municipality
+Classes_grade_6;Average number of classrooms of the grade in scope per municipality
+Classes_grade_7;Average number of classrooms of the grade in scope per municipality
+Classes_grade_8;Average number of classrooms of the grade in scope per municipality
+Classes_grade_9;Average number of classrooms of the grade in scope per municipality
+Classrooms;Proportion of school buildings adequately provided with classrooms
+Classrooms_MP;Proportion of missing items for the field in scope
+Collective_spaces;Proportion of school buildings provided with collective spaces
+Collective_spaces_MP;Proportion of missing items for the field in scope
+Covers_insulation;Proportion of school buildings provided with outside insulation
+Covers_insulation_MP;Proportion of missing items for the field in scope
+Cultural_heritage_restrictions;Proportion of school buildings undergoing cultural heritage restrictions
+Cultural_heritage_restrictions_MP;Proportion of missing items for the field in scope
+D_mun;Municipality classified as intermediate inner area, i.e. lying within a road-travel distance of 27-40 minutes from the closest infrastructural pole
+D_mun_MP;Proportion of missing items for the field in scope
+Decayed_urban_area;Proportion of schools lying in a decayed urban area
+Decayed_urban_area_MP;Proportion of missing items for the field in scope
+Different_floors_internal_insulation;Proportion of school buildings whose storeys are internally insulated
+Different_floors_internal_insulation_MP;Proportion of missing items for the field in scope
+Disabled_people_compliant_sanitation;Proportion of school buildings with sanitation systems appropriate for disable people
+Disabled_people_compliant_sanitation_MP;Proportion of missing items for the field in scope
+Disabled_people_elevator;Proportion of school buildings provided with disabled people elevators
+Disabled_people_elevator_MP;Proportion of missing items for the field in scope
+Disabled_people_transport;Proportion of school buildings reached by disabled people-specific transport
+Disabled_people_transport_MP;Proportion of missing items for the field in scope
+District_heating;Proportion of school buildings with district heating
+District_heating_MP;Proportion of missing items for the field in scope
+Double_windows_glazing;Proportion of school buildings provided with double-windows glazing
+Double_windows_glazing_MP;Proportion of missing items for the field in scope
+Dumps_proximity;Proportion of school buildings lying close to dumps
+Dumps_proximity_MP;Proportion of missing items for the field in scope
+E_mun;Municipality classified as peripheral inner area, i.e. lying within a road-travel distance of 40-66 minutes from the closest infrastructural pole
+E_mun_MP;Proportion of missing items for the field in scope
+Electromagnetic_radiation_sources_proximity;Proportion of school buildings lying close to electromagnetic radiation sources
+Electromagnetic_radiation_sources_proximity_MP;Proportion of missing items for the field in scope
+Elevator_stairlift;Proportion of school buildings served by elevator stairlifts
+Elevator_stairlift_MP;Proportion of missing items for the field in scope
+Energy_saving_devices;Proportion of school buildings implementing energy saving devices
+Energy_saving_devices_MP;Proportion of missing items for the field in scope
+External_access_ramps;Proportion of school buildings provided with external access ramps
+External_access_ramps_MP;Proportion of missing items for the field in scope
+External_routes;Proportion of school buildings provided with external routes
+External_routes_MP;Proportion of missing items for the field in scope
+F_mun;Municipality classified as ultra-peripheral inner area, i.e. lying within a road-travel distance greater than 66 minutes from the closest infrastructural pole
+F_mun_MP;Proportion of missing items for the field in scope
+Floors_number;Most frequent number of storeys of school buildings
+Floors_number_MP;Proportion of missing items for the field in scope
+Free_area_surface;Average free area surface of school buildings
+Free_area_surface_MP;Proportion of missing items for the field in scope
+Graveyards_proximity;Proportion of school buildings lying close to cemeteries
+Graveyards_proximity_MP;Proportion of missing items for the field in scope
+Gross_building_volume;Average volume of school buildings
+Gross_building_volume_MP;Proportion of missing items for the field in scope
+Gymnasium;Proportion of school buildings with a gymnasium
+Gymnasium_MP;Proportion of missing items for the field in scope
+Hazardous_industries_proximity;Proportion of school buildings lying close to perilous industries
+Hazardous_industries_proximity_MP;Proportion of missing items for the field in scope
+Heating_system;Proportion of school buildings served by heating systems
+Heating_system_MP;Proportion of missing items for the field in scope
+Heating_system_zoning;Proportion of school buildings with heating system zoning
+Heating_system_zoning_MP;Proportion of missing items for the field in scope
+Hydrogeological_restrictions;Proportion of school builings subject to hydrogeological restrictions
+Hydrogeological_restrictions_MP;Proportion of missing items for the field in scope
+Inner_area;Municipality classified as inner area
+Inner_area_MP;Proportion of missing items for the field in scope
+Internal_insulation;Proportion of school buildings with internal insulation
+Internal_insulation_MP;Proportion of missing items for the field in scope
+Internal_routes;Proportion of shool buildings provided with internal routes
+Internal_routes_MP;Proportion of missing items for the field in scope
+Interurban_public_transport;Proportion of school buildings lying close to interurban public transport hubs
+Interurban_public_transport_MP;Proportion of missing items for the field in scope
+IT_classrooms;Proportion of school buildings provided with IT classrooms
+IT_classrooms_MP;Proportion of missing items for the field in scope
+Landscape_restrictions;Proportion of school buildings undergoing landscape restrictions
+Landscape_restrictions_MP;Proportion of missing items for the field in scope
+Large_traffic;Proportion of schools lying in presence of large road traffic
+Large_traffic_MP;Proportion of missing items for the field in scope
+Layby_absence;Proportion of schools not provided with an external layby
+Layby_absence_MP;Proportion of missing items for the field in scope
+M_English_L_13;Average invalsi score of subject and school grade in scope
+M_English_L_5;Average invalsi score of subject and school grade in scope
+M_English_L_8;Average invalsi score of subject and school grade in scope
+M_English_R_13;Average invalsi score of subject and school grade in scope
+M_English_R_5;Average invalsi score of subject and school grade in scope
+M_English_R_8;Average invalsi score of subject and school grade in scope
+M_Italian_10;Average invalsi score of subject and school grade in scope
+M_Italian_13;Average invalsi score of subject and school grade in scope
+M_Italian_2;Average invalsi score of subject and school grade in scope
+M_Italian_5;Average invalsi score of subject and school grade in scope
+M_Italian_8;Average invalsi score of subject and school grade in scope
+M_Mathematics_10;Average invalsi score of subject and school grade in scope
+M_Mathematics_13;Average invalsi score of subject and school grade in scope
+M_Mathematics_2;Average invalsi score of subject and school grade in scope
+M_Mathematics_5;Average invalsi score of subject and school grade in scope
+M_Mathematics_8;Average invalsi score of subject and school grade in scope
+Municipality_code;Official statistical LAU code
+Municipality_description;Name of the municipality
+National_seismic_classification;Seismic classification of the municipality
+National_seismic_classification_MP;Proportion of missing items for the field in scope
+nbuildings;Number of school buildings in a municipality
+Order;School order: primary, middle or high
+Other_heating_system;Proportion of school buildings provided with other heating systems
+Other_heating_system_MP;Proportion of missing items for the field in scope
+Other_uses;Proportion of school buildings originally built with other uses than schooling
+Other_uses_MP;Proportion of missing items for the field in scope
+Outside_walls_insulation;Proportion of school buildings with insulated outside walls
+Outside_walls_insulation_MP;Proportion of missing items for the field in scope
+Photovoltaic_system;Proportion of school buildings employing a photovoltaic energy systems
+Photovoltaic_system_MP;Proportion of missing items for the field in scope
+Pollutant_industries_proximity;Proportion of school builidings lying close to pollutant industries
+Pollutant_industries_proximity_MP;Proportion of missing items for the field in scope
+Polluted_waters_proximity;Proportion of school buildings lying close to polluted waters
+Polluted_waters_proximity_MP;Proportion of missing items for the field in scope
+Private_transport;Proportion of school buildings reached by private transport
+Private_transport_MP;Proportion of missing items for the field in scope
+Protected_building;Proportion of school buildings protected according to the Cultural Heritage Code, i.e. Legislative Decree 22/01/2004 n. 42 (ex Law 1089/39)
+Protected_building_MP;Proportion of missing items for the field in scope
+Province_code;Official statistical NUTS-3 code
+Province_initials;NUTS-3 abbreviation (two letters)
+Railway_traffic;Proportion of school buildings lying close to railways
+Railway_traffic_MP;Proportion of missing items for the field in scope
+Railway_transport;Proportion of school buildings lying close to train stations
+Railway_transport_MP;Proportion of missing items for the field in scope
+S_English_L_13;Standard deviation of the Invalsi score of subject and grade in scope
+S_English_L_5;Standard deviation of the Invalsi score of subject and grade in scope
+S_English_L_8;Standard deviation of the Invalsi score of subject and grade in scope
+S_English_R_13;Standard deviation of the Invalsi score of subject and grade in scope
+S_English_R_5;Standard deviation of the Invalsi score of subject and grade in scope
+S_English_R_8;Standard deviation of the Invalsi score of subject and grade in scope
+S_Italian_10;Standard deviation of the Invalsi score of subject and grade in scope
+S_Italian_13;Standard deviation of the Invalsi score of subject and grade in scope
+S_Italian_2;Standard deviation of the Invalsi score of subject and grade in scope
+S_Italian_5;Standard deviation of the Invalsi score of subject and grade in scope
+S_Italian_8;Standard deviation of the Invalsi score of subject and grade in scope
+S_Mathematics_10;Standard deviation of the Invalsi score of subject and grade in scope
+S_Mathematics_13;Standard deviation of the Invalsi score of subject and grade in scope
+S_Mathematics_2;Standard deviation of the Invalsi score of subject and grade in scope
+S_Mathematics_5;Standard deviation of the Invalsi score of subject and grade in scope
+S_Mathematics_8;Standard deviation of the Invalsi score of subject and grade in scope
+School_area_specific_criticalities;Proportion of school buildings with specific critical issues
+School_area_specific_criticalities_MP;Proportion of missing items for the field in scope
+School_area_surface;Average area of school buildings
+School_area_surface_MP;Proportion of missing items for the field in scope
+School_bus;Proportion of school buildings reached by school buses
+School_bus_MP;Proportion of missing items for the field in scope
+School_use;Proportion of school buildings originally built to host a school
+School_use_MP;Proportion of missing items for the field in scope
+Seismic_adaptation;Proportion of school buildings which underwent seismic adaptation
+Seismic_adaptation_MP;Proportion of missing items for the field in scope
+Seismic_design;Proportion of schools built in accordance to seismic design
+Seismic_design_MP;Proportion of missing items for the field in scope
+Seismic_improvement;Proportion of school buildings which underwent seismic improvement
+Seismic_improvement_MP;Proportion of missing items for the field in scope
+Solar_heating_system;Proportion of school buildings provided with solar energy heating systems
+Solar_heating_system_MP;Proportion of missing items for the field in scope
+Stairs_up_to_standard;Proportion of school buildings with stairways built according to law standards
+Stairs_up_to_standard_MP;Proportion of missing items for the field in scope
+Static_testing_certification;Proportion of school buildings which underwent static testing
+Static_testing_certification_MP;Proportion of missing items for the field in scope
+Students_grade_1;Average number of students per school attending the grade in scope
+Students_grade_10;Average number of students per school attending the grade in scope
+Students_grade_11;Average number of students per school attending the grade in scope
+Students_grade_12;Average number of students per school attending the grade in scope
+Students_grade_13;Average number of students per school attending the grade in scope
+Students_grade_2;Average number of students per school attending the grade in scope
+Students_grade_3;Average number of students per school attending the grade in scope
+Students_grade_4;Average number of students per school attending the grade in scope
+Students_grade_5;Average number of students per school attending the grade in scope
+Students_grade_6;Average number of students per school attending the grade in scope
+Students_grade_7;Average number of students per school attending the grade in scope
+Students_grade_8;Average number of students per school attending the grade in scope
+Students_grade_9;Average number of students per school attending the grade in scope
+Students_per_class_1;Average number of students per school attending the grade in scope
+Students_per_class_10;Average number of students per school attending the grade in scope
+Students_per_class_11;Average number of students per school attending the grade in scope
+Students_per_class_12;Average number of students per school attending the grade in scope
+Students_per_class_13;Average number of students per school attending the grade in scope
+Students_per_class_2;Average number of students per school attending the grade in scope
+Students_per_class_3;Average number of students per school attending the grade in scope
+Students_per_class_4;Average number of students per school attending the grade in scope
+Students_per_class_5;Average number of students per school attending the grade in scope
+Students_per_class_6;Average number of students per school attending the grade in scope
+Students_per_class_7;Average number of students per school attending the grade in scope
+Students_per_class_8;Average number of students per school attending the grade in scope
+Students_per_class_9;Average number of students per school attending the grade in scope
+Students_per_class_Tot;Average number of students
+Swimming_pool;Proportion of school buildings provided with a swimming pool
+Swimming_pool_MP;Proportion of missing items for the field in scope
+Teachers_per_class;Province-level number of teachers per class
+Teachers_per_student;Province-level teachers per student ratio
+Teaching_spaces;Proportion of school buildings hosting adequate teaching spaces
+Teaching_spaces_MP;Proportion of missing items for the field in scope
+Technology_classrooms;Proportion of school buildings provided with technologi classrooms
+Technology_classrooms_MP;Proportion of missing items for the field in scope
+Tot_Classes;Average number of classrooms per school
+Tot_Students;Average number of students per school
+Tot_teachers;Province-level average number of teachers
+Undisturbed_context;Proportion of school buildings located in a context without particular disturbance elements
+Undisturbed_context_MP;Proportion of missing items for the field in scope
+Unenclosed_area;Proportion of school buildings not adequately enclosed
+Unenclosed_area_MP;Proportion of missing items for the field in scope
+Urban_public_transport;Proportion of school buildings close to urban public transport hubs
+Urban_public_transport_MP;Proportion of missing items for the field in scope
+Ventilation_conditioning;Proportion of school buildings with ventilation conditioning
+Ventilation_conditioning_MP;Proportion of missing items for the field in scope
+Weelchair_accessible_doors_width;Proportion of school buildings whose doors are wide enough for wheelchair passage
+Weelchair_accessible_doors_width_MP;Proportion of missing items for the field in scope

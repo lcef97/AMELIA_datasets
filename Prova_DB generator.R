@@ -30,16 +30,17 @@ library(magrittr)
 # These variables are of no interest
 DB23_mun <- DB23_mun %>% dplyr::select(-.data$Other_disturbances_proximity,
                            -.data$Other_specific_criticalities,
-                           -.data$Other, -.data$Other_specfy,
+                           -.data$Other, .data$Other_devices, -.data$Other_specfy,
                            -.data$Other_disturbances_proximity_MP,
                            -.data$Other_specific_criticalities_MP, -.data$Other_MP, 
-                           -.data$Other_specfy_MP)  
+                           -.data$Other_specfy_MP, .data$Other_devices_MP)  
 
 
 # export
 write.csv(DB23_mun, file = "DB23.csv")
 
+
 # BLANK field track - FILLED IN MANUALLY VIA EXCEL
-write.csv(data.frame(names(DB23_mun)), file = "field_track.csv")
+#write.csv(data.frame(names(DB23_mun)), file = "field_track.csv")
 
 
