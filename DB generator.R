@@ -2,7 +2,7 @@
 input_Invalsi <- SchoolDataIT::Get_Invalsi_IS(multiple_out = T)
 input_Invalsi_mun <- input_Invalsi$Municipality_data
 
-# 2021/22 data - latest available until now ------------------------------------
+# 2021/22 data -----------------------------------------------------------------
 Registry22 <- SchoolDataIT::Get_Registry(2022)
 input_DB22_MIUR <- SchoolDataIT::Get_DB_MIUR(2022, 
                                              input_Registry = Registry22, 
