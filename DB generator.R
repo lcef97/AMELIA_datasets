@@ -1,6 +1,97 @@
 # Invalsi data - useful for all years
 input_Invalsi <- SchoolDataIT::Get_Invalsi_IS(multiple_out = T)
 input_Invalsi_mun <- input_Invalsi$Municipality_data
+# 2018/19 data -----------------------------------------------------------------
+Registry19 <- SchoolDataIT::Get_Registry(2019)
+input_DB19_MIUR <- SchoolDataIT::Get_DB_MIUR(2019, 
+                                             input_Registry = Registry19, 
+                                             certifications = T)
+input_nstud_19 <- SchoolDataIT::Get_nstud(Year = 2019)
+nteachers_19 <- SchoolDataIT::Get_nteachers_prov(Year = 2019)
+School2mun19 <- SchoolDataIT::Get_School2mun(2019, input_Registry = Registry21)
+
+# Output dataset
+DB19_mun <- 
+  SchoolDataIT::Set_DB(input_SchoolBuildings = input_DB19_MIUR,
+                       input_nstud = input_nstud_19,
+                       input_nteachers = nteachers_19, 
+                       input_Registry = Registry19, 
+                       input_Invalsi_IS = input_Invalsi_mun,
+                       input_School2mun = School2mun19,
+                       BroadBand = FALSE,
+                       ord_InnerAreas = TRUE, 
+                       SchoolBuildings_include_qualitatives = T,
+                       SchoolBuildings_flag_outliers = F,
+                       SchoolBuildings_col_cut_thresh = nrow(input_DB19_MIUR),
+                       SchoolBuildings_count_missing = T,
+                       NA_autoRM = F)
+library(magrittr)
+# These variables are of no interest
+DB19_mun <- DB19_mun %>% dplyr::select(-.data$Other_disturbances_proximity,
+                                       -.data$Other_consumption_reduction_devices,
+                                       -.data$Other, -.data$Other_devices, 
+                                       -.data$Other_disturbances_proximity_MP,
+                                       -.data$Other_consumption_reduction_devices_MP, -.data$Other_MP, 
+                                       -.data$Other_devices_MP)  
+
+
+# export
+write.csv(DB19_mun, file = "DB19.csv", row.names = FALSE)
+
+
+# BLANK field track - FILLED IN MANUALLY VIA EXCEL
+#write.csv(data.frame(sort(names(DB19_mun))), file = "field_track_2019.csv", row.names = FALSE)
+
+
+
+
+
+
+# 2020/21 data -----------------------------------------------------------------
+Registry21 <- SchoolDataIT::Get_Registry(2021)
+input_DB21_MIUR <- SchoolDataIT::Get_DB_MIUR(2021, 
+                                             input_Registry = Registry21, 
+                                             certifications = T)
+input_nstud_21 <- SchoolDataIT::Get_nstud(Year = 2021)
+nteachers_21 <- SchoolDataIT::Get_nteachers_prov(Year = 2021)
+input_BB200901 <- SchoolDataIT::Get_BroadBand(Date = as.Date("2020-09-01"))
+School2mun21 <- SchoolDataIT::Get_School2mun(2021, input_Registry = Registry21)
+
+# Output dataset
+DB21_mun <- 
+  SchoolDataIT::Set_DB(input_SchoolBuildings = input_DB21_MIUR,
+                       input_nstud = input_nstud_21,
+                       input_nteachers = nteachers_21, 
+                       input_Registry = Registry21, 
+                       input_Invalsi_IS = input_Invalsi_mun,
+                       input_School2mun = School2mun21,
+                       input_BroadBand = input_BB200901,
+                       ord_InnerAreas = TRUE, 
+                       SchoolBuildings_include_qualitatives = T,
+                       SchoolBuildings_flag_outliers = F,
+                       SchoolBuildings_col_cut_thresh = nrow(input_DB21_MIUR),
+                       SchoolBuildings_count_missing = T,
+                       NA_autoRM = F)
+library(magrittr)
+# These variables are of no interest
+DB21_mun <- DB21_mun %>% dplyr::select(-.data$Other_disturbances_proximity,
+                                       -.data$Other_specific_criticalities,
+                                       -.data$Other, -.data$Other_devices, -.data$Other_specfy,
+                                       -.data$Other_disturbances_proximity_MP,
+                                       -.data$Other_specific_criticalities_MP, -.data$Other_MP, 
+                                       -.data$Other_specfy_MP, -.data$Other_devices_MP)  
+
+
+# export
+write.csv(DB21_mun, file = "DB21.csv")
+
+
+# BLANK field track - FILLED IN MANUALLY VIA EXCEL
+#write.csv(data.frame(sort(names(DB21_mun))), file = "field_track_2021.csv", row.names = FALSE)
+
+
+
+
 
 # 2021/22 data -----------------------------------------------------------------
 Registry22 <- SchoolDataIT::Get_Registry(2022)
@@ -38,11 +129,11 @@ DB22_mun <- DB22_mun %>% dplyr::select(-.data$Other_disturbances_proximity,
 
 
 # export
-write.csv(DB22_mun, file = "DB22.csv")
+write.csv(DB22_mun, file = "DB22.csv", row.names = FALSE)
 
 
 # BLANK field track - FILLED IN MANUALLY VIA EXCEL
-#write.csv(data.frame(names(DB23_mun)), file = "field_track.csv")
+#write.csv(data.frame(sort(names(DB22_mun))), file = "field_track_2022.csv", row.names = FALSE)
 
 
 
@@ -83,10 +174,10 @@ DB23_mun <- DB23_mun %>% dplyr::select(-.data$Other_disturbances_proximity,
 
 
 # export
-write.csv(DB23_mun, file = "DB23.csv")
+write.csv(DB23_mun, file = "DB23.csv", row.names= FALSE)
 
 
 # BLANK field track - FILLED IN MANUALLY VIA EXCEL
-#write.csv(data.frame(names(DB23_mun)), file = "field_track.csv")
+#write.csv(data.frame(sort(names(DB23_mun))), file = "field_track_2023.csv", row.names = FALSE)
 
 
