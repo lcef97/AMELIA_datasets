@@ -1,6 +1,56 @@
 # Invalsi data - useful for all years
 input_Invalsi <- SchoolDataIT::Get_Invalsi_IS(multiple_out = T)
 input_Invalsi_mun <- input_Invalsi$Municipality_data
+# 2015/16 data -----------------------------------------------------------------
+Registry16 <- SchoolDataIT::Get_Registry(2016)
+input_DB16_MIUR <- SchoolDataIT::Get_DB_MIUR(2016, 
+                                             input_Registry = Registry16, 
+                                             certifications = T)
+input_nstud_16 <- SchoolDataIT::Get_nstud(Year = 2016)
+nteachers_16 <- SchoolDataIT::Get_nteachers_prov(Year = 2016)
+School2mun16 <- SchoolDataIT::Get_School2mun(2016, input_Registry = Registry16)
+
+# Output dataset
+DB16_mun <- 
+  SchoolDataIT::Set_DB(input_SchoolBuildings = input_DB16_MIUR,
+                       input_nstud = input_nstud_16,
+                       input_nteachers = nteachers_16, 
+                       input_Registry = Registry16, 
+                       input_Invalsi_IS = input_Invalsi_mun,
+                       input_School2mun = School2mun16,
+                       BroadBand = FALSE,
+                       ord_InnerAreas = TRUE, 
+                       SchoolBuildings_include_qualitatives = T,
+                       SchoolBuildings_flag_outliers = F,
+                       SchoolBuildings_col_cut_thresh = nrow(input_DB16_MIUR),
+                       SchoolBuildings_count_missing = T,
+                       NA_autoRM = F)
+library(magrittr)
+# These variables are of no interest
+DB16_mun <- DB16_mun %>%  dplyr::select(-.data$Other_disturbances_proximity,
+                                        -.data$Other_consumption_reduction_devices,
+                                        -.data$Other, -.data$Other_devices, 
+                                        -.data$Other_heating_system, -.data$Other_insulation_type,
+                                        -.data$Other_disturbances_proximity_MP,
+                                        -.data$Other_consumption_reduction_devices_MP, -.data$Other_MP, 
+                                        -.data$Other_devices_MP,
+                                        -.data$Other_heating_system_MP, -.data$Other_insulation_type_MP)  
+
+
+
+
+# export
+write.csv(DB16_mun, file = "DB16.csv", row.names = FALSE)
+
+
+# BLANK field track - FILLED IN MANUALLY VIA EXCEL
+#write.csv(data.frame(sort(names(DB16_mun))), file = "field_track_2016.csv", row.names = FALSE)
+
+
+
+
+
+
 # 2017/18 data -----------------------------------------------------------------
 Registry18 <- SchoolDataIT::Get_Registry(2018)
 input_DB18_MIUR <- SchoolDataIT::Get_DB_MIUR(2018, 
@@ -45,7 +95,6 @@ write.csv(DB18_mun, file = "DB18.csv", row.names = FALSE)
 
 # BLANK field track - FILLED IN MANUALLY VIA EXCEL
 #write.csv(data.frame(sort(names(DB18_mun))), file = "field_track_2018.csv", row.names = FALSE)
-
 
 
 

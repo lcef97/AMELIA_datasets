@@ -11,4 +11,13 @@ Before submitting data to the Platform it is necessary to provide an adequate de
 #### Important: script uses version 0.2.4
 
 This version employs version 0.2.4 of the package, which still has to be shared on CRAN.
-So, please make sure to download the experimental version of the package from GitHub.
+So, please make sure to download the experimental version of the package from GitHub, e.g. using the code:
+``` r
+devtools::install_github("lcef97/SchoolDataIT")
+```
+If you want to force R not to upgrade the dependencies, use instead:
+``` r
+devtools::install_github("lcef97/SchoolDataIT", upgrade = "never")
+```
+
+
