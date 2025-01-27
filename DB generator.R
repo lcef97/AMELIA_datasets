@@ -1,6 +1,6 @@
-# Invalsi data - useful for all years
-input_Invalsi <- SchoolDataIT::Get_Invalsi_IS(multiple_out = T)
-input_Invalsi_mun <- input_Invalsi$Municipality_data
+#'  #--------------------------------------------------------------------------#
+#'  #              DB GENERATOR for Amelia Platform                            #
+#'  #--------------------------------------------------------------------------#           
 #'
 #'  Important: this script uses version 0.2.4 of SchoolDataIT
 #'  At the moment (end of January 2025) it still has to be submitted
@@ -9,9 +9,15 @@ input_Invalsi_mun <- input_Invalsi$Municipality_data
 #'  e.g. by the command:
 #'                      
 #'                      
-#'                      devtools::install_github("lcef97/SchoolDataIT")
+#'                  devtools::install_github("lcef97/SchoolDataIT")
 #'                      
 #'  Version 0.2.3 is only good for generating 2017+ DBs.
+#'  
+#'  ---------------------------------------------------------------------------#
+
+# Invalsi data - useful for all years
+input_Invalsi <- SchoolDataIT::Get_Invalsi_IS(multiple_out = T)
+input_Invalsi_mun <- input_Invalsi$Municipality_data
 
 
 # 2015/16 data -----------------------------------------------------------------
@@ -186,10 +192,10 @@ library(magrittr)
 # These variables are of no interest
 DB21_mun <- DB21_mun %>% dplyr::select(-.data$Other_disturbances_proximity,
                                        -.data$Other_specific_criticalities,
-                                       -.data$Other, -.data$Other_devices, -.data$Other_specfy,
+                                       -.data$Other, -.data$Other_devices, -.data$Other_specify,
                                        -.data$Other_disturbances_proximity_MP,
                                        -.data$Other_specific_criticalities_MP, -.data$Other_MP, 
-                                       -.data$Other_specfy_MP, -.data$Other_devices_MP)  
+                                       -.data$Other_specify_MP, -.data$Other_devices_MP)  
 
 
 # export
@@ -232,10 +238,10 @@ library(magrittr)
 # These variables are of no interest
 DB22_mun <- DB22_mun %>% dplyr::select(-.data$Other_disturbances_proximity,
                                        -.data$Other_specific_criticalities,
-                                       -.data$Other, -.data$Other_devices, -.data$Other_specfy,
+                                       -.data$Other, -.data$Other_devices, -.data$Other_specify,
                                        -.data$Other_disturbances_proximity_MP,
                                        -.data$Other_specific_criticalities_MP, -.data$Other_MP, 
-                                       -.data$Other_specfy_MP, -.data$Other_devices_MP)  
+                                       -.data$Other_specify_MP, -.data$Other_devices_MP)  
 
 
 # export
