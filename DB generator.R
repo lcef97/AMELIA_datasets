@@ -1,7 +1,21 @@
 # Invalsi data - useful for all years
 input_Invalsi <- SchoolDataIT::Get_Invalsi_IS(multiple_out = T)
 input_Invalsi_mun <- input_Invalsi$Municipality_data
+#'
+#'  Important: this script uses version 0.2.4 of SchoolDataIT
+#'  At the moment (end of January 2025) it still has to be submitted
+#'  to CRAN. 
+#'  Therefore, make sure to use this experimental version,
+#'  e.g. by the command:
+#'                      
+#'                      
+#'                      devtools::install_github("lcef97/SchoolDataIT")
+#'                      
+#'  Version 0.2.3 is only good for generating 2017+ DBs.
+
+
 # 2015/16 data -----------------------------------------------------------------
+
 Registry16 <- SchoolDataIT::Get_Registry(2016)
 input_DB16_MIUR <- SchoolDataIT::Get_DB_MIUR(2016, 
                                              input_Registry = Registry16, 
@@ -27,14 +41,8 @@ DB16_mun <-
                        NA_autoRM = F)
 library(magrittr)
 # These variables are of no interest
-DB16_mun <- DB16_mun %>%  dplyr::select(-.data$Other_disturbances_proximity,
-                                        -.data$Other_consumption_reduction_devices,
-                                        -.data$Other, -.data$Other_devices, 
-                                        -.data$Other_heating_system, -.data$Other_insulation_type,
-                                        -.data$Other_disturbances_proximity_MP,
-                                        -.data$Other_consumption_reduction_devices_MP, -.data$Other_MP, 
-                                        -.data$Other_devices_MP,
-                                        -.data$Other_heating_system_MP, -.data$Other_insulation_type_MP)  
+DB16_mun <- DB16_mun %>%  dplyr::select(-.data$Other,
+                                        -.data$Other_MP)  
 
 
 
@@ -269,10 +277,10 @@ library(magrittr)
 # These variables are of no interest
 DB23_mun <- DB23_mun %>% dplyr::select(-.data$Other_disturbances_proximity,
                            -.data$Other_specific_criticalities,
-                           -.data$Other, -.data$Other_devices, -.data$Other_specfy,
+                           -.data$Other, -.data$Other_devices, -.data$Other_specify,
                            -.data$Other_disturbances_proximity_MP,
                            -.data$Other_specific_criticalities_MP, -.data$Other_MP, 
-                           -.data$Other_specfy_MP, -.data$Other_devices_MP)  
+                           -.data$Other_specify_MP, -.data$Other_devices_MP)  
 
 
 # export
