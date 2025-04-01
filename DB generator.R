@@ -2,8 +2,8 @@
 #'  #              DB GENERATOR for Amelia Platform                            #
 #'  #--------------------------------------------------------------------------#           
 #'
-#'  Important: this script uses version 0.2.4 of SchoolDataIT
-#'  At the moment (end of January 2025) it still has to be submitted
+#'  Important: this script uses version 0.2.5 of SchoolDataIT
+#'  At the moment it still has to be submitted
 #'  to CRAN. 
 #'  Therefore, make sure to use this experimental version,
 #'  e.g. by the command:
@@ -11,15 +11,74 @@
 #'                      
 #'                  devtools::install_github("lcef97/SchoolDataIT")
 #'                      
-#'  Version 0.2.3 is only good for generating 2017+ DBs.
+#'  
 #'  
 #'  ---------------------------------------------------------------------------#
 
-# Invalsi data - useful for all years
+
+##' #--------------------------------------------------------------------------
+##'         Shorter datasets - only school buildings                  
+#'  #--------------------------------------------------------------------------#           
+
+##' 2015/16 data ---------------------------------------------------------------
+Registry16 <- SchoolDataIT::Get_Registry(2016)
+input_DB16_MIUR <- SchoolDataIT::Get_DB_MIUR(2016, 
+                                             input_Registry = Registry16, 
+                                             certifications = T)
+DB16_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB16_MIUR, InnerAreas  = FALSE)
+write.csv(DB16_MIUR$Municipality_data, file = "DB16_MIUR.csv", row.names = FALSE)
+
+##' 2017/18 data ---------------------------------------------------------------
+Registry18 <- SchoolDataIT::Get_Registry(2018)
+input_DB18_MIUR <- SchoolDataIT::Get_DB_MIUR(2018, 
+                                             input_Registry = Registry18, 
+                                             certifications = T)
+DB18_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB18_MIUR, InnerAreas  = FALSE)
+write.csv(DB18_MIUR$Municipality_data, file = "DB18_MIUR.csv", row.names = FALSE)
+##' 2018/19 data ---------------------------------------------------------------
+Registry19 <- SchoolDataIT::Get_Registry(2019)
+input_DB19_MIUR <- SchoolDataIT::Get_DB_MIUR(2019, 
+                                             input_Registry = Registry19, 
+                                             certifications = T)
+DB19_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB19_MIUR, InnerAreas  = FALSE, col_cut_thresh = 1000)
+write.csv(DB19_MIUR$Municipality_data, file = "DB19_MIUR.csv", row.names = FALSE)
+##' 2020/21 data ---------------------------------------------------------------
+Registry21 <- SchoolDataIT::Get_Registry(2021)
+input_DB21_MIUR <- SchoolDataIT::Get_DB_MIUR(2021, 
+                                             input_Registry = Registry21, 
+                                             certifications = T)
+DB21_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB21_MIUR, InnerAreas  = FALSE, col_cut_thresh = 1000)
+write.csv(DB21_MIUR$Municipality_data, file = "DB21_MIUR.csv", row.names = FALSE)
+##' 2021/22 data ---------------------------------------------------------------
+Registry22 <- SchoolDataIT::Get_Registry(2022)
+input_DB22_MIUR <- SchoolDataIT::Get_DB_MIUR(2022, 
+                                             input_Registry = Registry22, 
+                                             certifications = T)
+DB22_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB22_MIUR, InnerAreas  = FALSE, col_cut_thresh = 1000)
+write.csv(DB22_MIUR$Municipality_data, file = "DB22_MIUR.csv", row.names = FALSE)
+##' 2022/23 data ---------------------------------------------------------------
+Registry23 <- SchoolDataIT::Get_Registry(2023)
+input_DB23_MIUR <- SchoolDataIT::Get_DB_MIUR(2023, 
+                                             input_Registry = Registry23, 
+                                             certifications = T)
+DB23_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB23_MIUR, InnerAreas  = FALSE, col_cut_thresh = 1000)
+write.csv(DB23_MIUR$Municipality_data, file = "DB23_MIUR.csv", row.names = FALSE)
+#'  
+#'  
+#'  
+#'  
+#'         
+##' #--------------------------------------------------------------------------
+#'  #              Complete datasets                                           #
+#'  #--------------------------------------------------------------------------#           
+#'
+#'  Not advisable to load them due to multiple owners and ungodly metadata.
+#'  
+#'  
+#'  Invalsi data - useful for all years
 input_Invalsi <- SchoolDataIT::Get_Invalsi_IS(multiple_out = T)
 input_Invalsi_mun <- input_Invalsi$Municipality_data
-
-
+#'
 # 2015/16 data -----------------------------------------------------------------
 
 Registry16 <- SchoolDataIT::Get_Registry(2016)
