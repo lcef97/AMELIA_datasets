@@ -1,0 +1,48 @@
+nome;descrizione
+Abandoned_industries;Proportion of school buildings lying close to abandoned industries
+Acoustic_insulation;Proportion of school buildings generally insulated from noise 
+Acoustic_pollution_sources_proximity;Proportion of school buildings lying close to acoustic pollution sources
+Administration_spaces;Proportion of school buildings provided with administration spaces
+Air_pollution_sources_proximity;Proportion of school buildingss lying close to air pollution sources
+Ancient_building;Proportion of school buildings older than 50 years
+Architectural_barriers_overcoming_devices;Proportion of school buildings provided with devices to overcome architectural barriers
+Auditorium;Proportion of school buildings provided with auditoria
+Canteen;Proportion of school buildings with a school restaurant/canteen
+Centralised_methane_system;Proportion of school buildings provided with centralised methane heating systems
+Collective_spaces;Proportion of school buildings provided with collective spaces
+Decayed_urban_area;Proportion of schools lying in a decayed urban area
+Disabled_people_transport;Proportion of school buildings reached by disabled people-specific transport
+Dumps_proximity;Proportion of school buildings lying close to dumps
+Electromagnetic_radiation_sources_proximity;Proportion of school buildings lying close to electromagnetic radiation sources
+Energy_saving_devices;Proportion of school buildings implementing energy saving devices
+Graveyards_proximity;Proportion of school buildings lying close to cemeteries
+Gymnasium;Proportion of school buildings with a gymnasium
+Gymnasium_swimming_pool;Proportion of school buildings with either a gymnasium or a swimming pool
+Hazardous_industries_proximity;Proportion of school buildings lying close to perilous industries
+Hydrogeological_restrictions;Proportion of school builings subject to hydrogeological restrictions
+Interurban_public_transport;Proportion of school buildings lying close to interurban public transport hubs
+Landscape_restrictions;Proportion of school buildings undergoing landscape restrictions
+Large_traffic;Proportion of schools lying in presence of large road traffic
+Layby_absence;Proportion of schools not provided with an external layby
+Main_hall;Proportion of school buildings provided with a main hall (Aula Magna)
+Municipality_code;Official statistical LAU code
+Municipality_description;Name of the municipality
+nbuildings;Number of school buildings in a municipality
+Order;School order: primary, middle or high
+Other_uses;Proportion of school buildings originally built with other uses than schooling
+Pollutant_industries_proximity;Proportion of school builidings lying close to pollutant industries
+Polluted_waters_proximity;Proportion of school buildings lying close to polluted waters
+Private_transport;Proportion of school buildings reached by private transport
+Province_code;Official statistical NUTS-3 code
+Province_initials;NUTS-3 abbreviation (two letters)
+Railway_traffic;Proportion of school buildings lying close to railways
+Railway_transport;Proportion of school buildings lying close to train stations
+School_area_specific_criticalities;Proportion of school buildings with specific critical issues
+School_bus;Proportion of school buildings reached by school buses
+School_use;Proportion of school buildings originally built to host a school
+Seismic_design;Proportion of schools built in accordance to seismic design
+Teaching_spaces;Proportion of school buildings hosting adequate teaching spaces
+Undisturbed_context;Proportion of school buildings located in a context without particular disturbance elements
+Unenclosed_area;Proportion of school buildings not adequately enclosed
+Urban_public_transport;Proportion of school buildings close to urban public transport hubs
+Year;School year

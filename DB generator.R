@@ -16,16 +16,15 @@
 #'  ---------------------------------------------------------------------------#
 
 
-##' #--------------------------------------------------------------------------
+##' #--------------------------------------------------------------------------#
 ##'         Shorter datasets - only school buildings                  
 #'  #--------------------------------------------------------------------------#           
-
 ##' 2015/16 data ---------------------------------------------------------------
 Registry16 <- SchoolDataIT::Get_Registry(2016)
 input_DB16_MIUR <- SchoolDataIT::Get_DB_MIUR(2016, 
                                              input_Registry = Registry16, 
                                              certifications = T)
-DB16_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB16_MIUR, InnerAreas  = FALSE)
+DB16_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB16_MIUR, InnerAreas  = FALSE, col_cut_thresh=1000)
 write.csv(DB16_MIUR$Municipality_data, file = "DB16_MIUR.csv", row.names = FALSE)
 
 ##' 2017/18 data ---------------------------------------------------------------
@@ -33,7 +32,7 @@ Registry18 <- SchoolDataIT::Get_Registry(2018)
 input_DB18_MIUR <- SchoolDataIT::Get_DB_MIUR(2018, 
                                              input_Registry = Registry18, 
                                              certifications = T)
-DB18_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB18_MIUR, InnerAreas  = FALSE)
+DB18_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB18_MIUR, InnerAreas  = FALSE, col_cut_thresh = 1000)
 write.csv(DB18_MIUR$Municipality_data, file = "DB18_MIUR.csv", row.names = FALSE)
 ##' 2018/19 data ---------------------------------------------------------------
 Registry19 <- SchoolDataIT::Get_Registry(2019)
@@ -68,6 +67,21 @@ write.csv(DB23_MIUR$Municipality_data, file = "DB23_MIUR.csv", row.names = FALSE
 #'  
 #'  
 #'         
+##' join -----------------------------------------------------------------------
+
+DB_MIUR <- dplyr::bind_rows(DB16_MIUR$Municipality_data, 
+                            DB18_MIUR$Municipality_data, 
+                            DB19_MIUR$Municipality_data,
+                            DB21_MIUR$Municipality_data,
+                            DB22_MIUR$Municipality_data,
+                            DB23_MIUR$Municipality_data)
+write.csv(DB_MIUR, file = "SchoolBuildings.csv", row.names = FALSE)
+
+
+# BLANK field track - FILLED IN MANUALLY VIA EXCEL
+#write.csv(data.frame(sort(names(DB_MIUR))), file = "field_track_MIUR.csv", row.names = FALSE)
+
+
 ##' #--------------------------------------------------------------------------
 #'  #              Complete datasets                                           #
 #'  #--------------------------------------------------------------------------#           
@@ -75,7 +89,8 @@ write.csv(DB23_MIUR$Municipality_data, file = "DB23_MIUR.csv", row.names = FALSE
 #'  Not advisable to load them due to multiple owners and ungodly metadata.
 #'  
 #'  
-#'  Invalsi data - useful for all years
+# Invalsi data, useful for all years -------------------------------------------
+#' Warning: download is slow
 input_Invalsi <- SchoolDataIT::Get_Invalsi_IS(multiple_out = T)
 input_Invalsi_mun <- input_Invalsi$Municipality_data
 #'
@@ -229,7 +244,7 @@ input_DB21_MIUR <- SchoolDataIT::Get_DB_MIUR(2021,
                                              certifications = T)
 input_nstud_21 <- SchoolDataIT::Get_nstud(Year = 2021)
 nteachers_21 <- SchoolDataIT::Get_nteachers_prov(Year = 2021)
-input_BB200901 <- SchoolDataIT::Get_BroadBand(Date = as.Date("2020-09-01"))
+#input_BB200901 <- SchoolDataIT::Get_BroadBand(Date = as.Date("2020-09-01"))
 School2mun21 <- SchoolDataIT::Get_School2mun(2021, input_Registry = Registry21)
 
 # Output dataset
@@ -240,7 +255,7 @@ DB21_mun <-
                        input_Registry = Registry21, 
                        input_Invalsi_IS = input_Invalsi_mun,
                        input_School2mun = School2mun21,
-                       input_BroadBand = input_BB200901,
+                       BroadBand = FALSE,
                        ord_InnerAreas = TRUE, 
                        SchoolBuildings_include_qualitatives = T,
                        SchoolBuildings_flag_outliers = F,
