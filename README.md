@@ -6,7 +6,7 @@ School Years to be covered are 2015/16, 2017/18, 2018/19, 2020/21, 2021/22, 2022
 
 As soon as data will be available for year 2023/24 relevant data will be loaded as well.
 
-Before submitting data to the Platform it is necessary to provide an adequate description of all fields in each dataset. This is an operation to be performed manually and will require some time. 
+Before submitting data to the Platform it is necessary to provide an adequate description of all fields in each dataset. This is an operation to be performed manually and will require some time. However, click [here](https://github.com/lcef97/AMELIA_datasets/blob/main/Complete%20data/field_track.csv) for metadata 
 
 #### Important: script uses version 0.2.5
 
