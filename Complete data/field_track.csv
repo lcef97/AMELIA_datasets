@@ -108,12 +108,18 @@ Elevator_stairlift,Proportion of school buildings served by elevator stairlifts
 Elevator_stairlift_MP,Proportion of missing items for the field in scope
 Energy_saving_devices,Proportion of school buildings implementing energy saving devices
 Energy_saving_devices_MP,Proportion of missing items for the field in scope
+Evacuation_plan,Proportion of school buildings with an evacuation plan
+Evacuation_plan_MP,Proportion of missing items for the field in scope
 External_access_ramps,Proportion of school buildings provided with external access ramps
 External_access_ramps_MP,Proportion of missing items for the field in scope
 External_routes,Proportion of school buildings provided with external routes
 External_routes_MP,Proportion of missing items for the field in scope
 F_mun,Municipality classified as ultra-peripheral inner area - i.e. lying within a road-travel distance greater than 66 minutes from the closest infrastructural pole (ISTAT inner areas taxonomy)
 F_mun_MP,Proportion of missing items for the field in scope
+Fire_prevention_activity_starting_notification,Proportion of school buildings for which the fire prevention activity has been implemented and reported through the official procedure of SCIA Antincendio - Segnalazione Certificata Inizio Attività Antincendio
+Fire_prevention_activity_starting_notification_MP,Proportion of missing items for the field in scope
+Fire_prevention_certification,Proportion of school buildings with a fire prevention certificate - in Italian CPI: Certificato Prevenzione Incendi
+Fire_prevention_certification_MP,Proportion of missing items for the field in scope
 Floors_number,Most frequent number of storeys of school buildings
 Floors_number_MP,Proportion of missing items for the field in scope
 Free_area_surface,Average free area surface of school buildings
@@ -169,6 +175,8 @@ Municipality_description,Name of the municipality
 National_seismic_classification,Seismic classification of the municipality
 National_seismic_classification_MP,Proportion of missing items for the field in scope
 nbuildings,Number of school buildings in a municipality
+Occupancy_report_certification,Proportion of school buildings for which the habitability condition has been certified with the procedure of SCAgi - Segnalazione Certificata di Agibilità in Italian
+Occupancy_report_certification_MP,Proportion of missing items for the field in scope
 Order,School order: primary - middle or high
 Other_heating_system,Proportion of school buildings provided with other heating systems
 Other_heating_system_MP,Proportion of missing items for the field in scope
@@ -176,6 +184,8 @@ Other_uses,Proportion of school buildings originally built with other uses than 
 Other_uses_MP,Proportion of missing items for the field in scope
 Outside_walls_insulation,Proportion of school buildings with insulated outside walls
 Outside_walls_insulation_MP,Proportion of missing items for the field in scope
+Periodic_fire_safety_compliance_renewal,Proportion of school buildings for which the certificate for the periodic renewal of fire prevention compliance has been submitted
+Periodic_fire_safety_compliance_renewal_MP,Proportion of missing items for the field in scope
 Photovoltaic_system,Proportion of school buildings employing a photovoltaic energy systems
 Photovoltaic_system_MP,Proportion of missing items for the field in scope
 Pollutant_industries_proximity,Proportion of school builidings lying close to pollutant industries
@@ -192,6 +202,8 @@ Railway_traffic,Proportion of school buildings lying close to railways
 Railway_traffic_MP,Proportion of missing items for the field in scope
 Railway_transport,Proportion of school buildings lying close to train stations
 Railway_transport_MP,Proportion of missing items for the field in scope
+Risk_assessment_document,Proportion of school buildings for which the risk assessment document has been produced - in Italian: DVR - Documento di Valutazione Rischi
+Risk_assessment_document_MP,Proportion of missing items for the field in scope
 S_English_L_13,Standard deviation of the Invalsi score of subject and grade in scope
 S_English_L_5,Standard deviation of the Invalsi score of subject and grade in scope
 S_English_L_8,Standard deviation of the Invalsi score of subject and grade in scope
@@ -263,6 +275,8 @@ Teaching_spaces,Proportion of school buildings hosting adequate teaching spaces
 Teaching_spaces_MP,Proportion of missing items for the field in scope
 Technology_classrooms,Proportion of school buildings provided with technologi classrooms
 Technology_classrooms_MP,Proportion of missing items for the field in scope
+Thermal_plant_INAIL_certification_booklet,Proportion of school buildings provided with the INAIL certification booklet for the heating system
+Thermal_plant_INAIL_certification_booklet_MP,Proportion of missing items for the field in scope
 Tot_Classes,Average number of classrooms per school
 Tot_Students,Average number of students per school
 Tot_teachers,Province-level average number of teachers
@@ -276,17 +290,3 @@ Ventilation_conditioning,Proportion of school buildings with ventilation conditi
 Ventilation_conditioning_MP,Proportion of missing items for the field in scope
 Weelchair_accessible_doors_width,Proportion of school buildings whose doors are wide enough for wheelchair passage
 Weelchair_accessible_doors_width_MP,Proportion of missing items for the field in scope
-Evacuation_plan,Proportion of school buildings with an evacuation plan
-Evacuation_plan_MP,Proportion of missing items for the field in scope
-Fire_prevention_activity_starting_notification,Proportion of school buildings for which the fire prevention activity has been implemented and reported through the official procedure of SCIA Antincendio - Segnalazione Certificata Inizio Attività Antincendio
-Fire_prevention_activity_starting_notification_MP,Proportion of missing items for the field in scope
-Fire_prevention_certification,Proportion of school buildings with a fire prevention certificate - in Italian CPI: Certificato Prevenzione Incendi
-Fire_prevention_certification_MP,Proportion of missing items for the field in scope
-Occupancy_report_certification,Proportion of school buildings for which the habitability condition has been certified with the procedure of SCAgi - Segnalazione Certificata di Agibilità in Italian
-Occupancy_report_certification_MP,Proportion of missing items for the field in scope
-Periodic_fire_safety_compliance_renewal,Proportion of school buildings for which the certificate for the periodic renewal of fire prevention compliance has been submitted
-Periodic_fire_safety_compliance_renewal_MP,Proportion of missing items for the field in scope
-Risk_assessment_document,Proportion of school buildings for which the risk assessment document has been produced - in Italian: DVR - Documento di Valutazione Rischi
-Risk_assessment_document_MP,Proportion of missing items for the field in scope
-Thermal_plant_INAIL_certification_booklet,Proportion of school buildings provided with the INAIL certification booklet for the heating system
-Thermal_plant_INAIL_certification_booklet_MP,Proportion of missing items for the field in scope
