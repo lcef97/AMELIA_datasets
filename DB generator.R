@@ -168,8 +168,18 @@ nstud24 <- SchoolDataIT::Group_nstud(input_nstud_24, Year = 2023, input_School2m
 write.csv(nstud24$Municipality_data, file = "Students counts/nstud24.csv", row.names = FALSE)
 
 ## join ------------------------------------------------------------------------
-# TBD: join!!!!!!!!!
 
+nstud <- dplyr::bind_rows(
+  dplyr::mutate(nstud16$Municipality_data, Year = "201516"),
+  dplyr::mutate(nstud18$Municipality_data, Year = "201718"),
+  dplyr::mutate(nstud19$Municipality_data, Year = "201819"),
+  dplyr::mutate(nstud21$Municipality_data, Year = "202021"),
+  dplyr::mutate(nstud22$Municipality_data, Year = "202122"),
+  dplyr::mutate(nstud23$Municipality_data, Year = "202223"),
+  dplyr::mutate(nstud24$Municipality_data, Year = "202324")) %>% 
+  dplyr::relocate(.data$Year, .before = 1)
+
+write.csv(nstud, file = "Students counts/nstud.csv", row.names = FALSE)
 
 
 # Invalsi data, useful for all years -------------------------------------------
