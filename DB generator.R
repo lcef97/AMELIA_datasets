@@ -75,14 +75,13 @@ DB_MIUR <- dplyr::bind_rows(DB16_MIUR$Municipality_data,
                             DB21_MIUR$Municipality_data,
                             DB22_MIUR$Municipality_data,
                             DB23_MIUR$Municipality_data)
-write.csv(DB_MIUR, file = "SchoolBuildings.csv", row.names = FALSE)
+write.csv(DB_MIUR, file = "DB_SchoolBuildings.csv", row.names = FALSE)
 
 
 # BLANK field track - FILLED IN MANUALLY VIA EXCEL
 #write.csv(data.frame(sort(names(DB_MIUR))), file = "field_track_MIUR.csv", row.names = FALSE)
 
-
-##' #--------------------------------------------------------------------------#
+##' #---------------------------------------------------------------------------
 ##'         Shorter datasets - only students counts                  
 #'  #--------------------------------------------------------------------------#    
 #'  
@@ -187,7 +186,7 @@ write.csv(nstud, file = "Students counts/nstud.csv", row.names = FALSE)
 #' Warning: download is slow 
 input_Invalsi <- SchoolDataIT::Get_Invalsi_IS(multiple_out = T)
 input_Invalsi_mun <- input_Invalsi$Municipality_data
-#'
+
 
 ##' #--------------------------------------------------------------------------
 #'  #              Complete datasets                                           #
