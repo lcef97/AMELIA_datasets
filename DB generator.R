@@ -186,6 +186,11 @@ write.csv(nstud, file = "Students counts/nstud.csv", row.names = FALSE)
 #' Warning: download is slow 
 input_Invalsi <- SchoolDataIT::Get_Invalsi_IS(multiple_out = T)
 input_Invalsi_mun <- input_Invalsi$Municipality_data
+Invalsi_wide <- SchoolDataIT::Util_Invalsi_filter(input_Invalsi_mun,
+                                                  Year = c(2013:2019, 2021:2024),
+                                                  level = "LAU",
+                                                  grade = c(2,5,8,10,13))
+write.csv(Invalsi_wide, file = "Invalsi/DB_Invalsi.csv", row.names = FALSE)
 
 
 ##' #--------------------------------------------------------------------------
