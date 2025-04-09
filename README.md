@@ -22,3 +22,16 @@ devtools::install_github("lcef97/SchoolDataIT", upgrade = "never")
 
 
 ## Datasets description
+
+#### School buildings
+Database of school infrastructure, as provided by the
+[Ministry](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/?area=Edilizia%20Scolastica).
+Covers school years 2015/16, 2017/18, 2018/19, 2020/21, 2021/22 and 2022/23. In order to keep high data quality standards, 
+only variables with 1000 or less missing filters have been selected. School data are aggregated at the LAU/municipality level.
+
+#### Students counts/classroom size
+Average classroom size, students counts and classrooms counts for municipalities, covering school years from 2016 to 2024
+
+#### Invalsi municipality data
+Municipality-level results of the Invalsi censuary survey.
+
