@@ -183,69 +183,69 @@ write.csv(DB_MIUR, file = "DB_SchoolBuildings.csv", row.names = FALSE)
 
 input_nstud_16 <- SchoolDataIT::Get_nstud(Year = 2016)
 if(!exists("Registry16")) Registry16 <- SchoolDataIT::Get_Registry(2016)
-nteachers_16 <- SchoolDataIT::Get_nteachers_prov(Year = 2016)
+#nteachers_16 <- SchoolDataIT::Get_nteachers_prov(Year = 2016)
 nstud16 <- SchoolDataIT::Group_nstud(input_nstud_16, Year = 2016, input_Registry = Registry16)
-teachers4stud16 <- SchoolDataIT::Group_teachers4stud(Year = 2016,
-                                                     input_nteachers = nteachers_16,
-                                                     input_nstud_raw = input_nstud_16)
-write.csv(nstud16$Municipality_data, file = "Students counts/nstud16.csv", row.names = FALSE)
+#teachers4stud16 <- SchoolDataIT::Group_teachers4stud(Year = 2016,
+ #                                                    input_nteachers = nteachers_16,
+  #                                                   input_nstud_raw = input_nstud_16)
+#write.csv(nstud16$Municipality_data, file = "Students counts/nstud16.csv", row.names = FALSE)
 
 
 ##' 2017/18 data ---------------------------------------------------------------
 
 input_nstud_18 <- SchoolDataIT::Get_nstud(Year = 2018)
 if(!exists("Registry18")) Registry18 <- SchoolDataIT::Get_Registry(2018)
-nteachers_18 <- SchoolDataIT::Get_nteachers_prov(Year = 2018)
+#nteachers_18 <- SchoolDataIT::Get_nteachers_prov(Year = 2018)
 nstud18 <- SchoolDataIT::Group_nstud(input_nstud_18, Year = 2018, input_Registry = Registry18)
-teachers4stud18 <- SchoolDataIT::Group_teachers4stud(Year = 2018,
-                                                     input_nteachers = nteachers_18,
-                                                     input_nstud_raw = input_nstud_18)
-write.csv(nstud18$Municipality_data, file = "Students counts/nstud18.csv", row.names = FALSE)
+#teachers4stud18 <- SchoolDataIT::Group_teachers4stud(Year = 2018,
+#                                                     input_nteachers = nteachers_18,
+#                                                     input_nstud_raw = input_nstud_18)
+#write.csv(nstud18$Municipality_data, file = "Students counts/nstud18.csv", row.names = FALSE)
 
 ##' 2018/19 data ---------------------------------------------------------------
 
 input_nstud_19 <- SchoolDataIT::Get_nstud(Year = 2019)
 if(!exists("Registry19")) Registry19 <- SchoolDataIT::Get_Registry(2019)
-nteachers_19 <- SchoolDataIT::Get_nteachers_prov(Year = 2019)
+#nteachers_19 <- SchoolDataIT::Get_nteachers_prov(Year = 2019)
 nstud19 <- SchoolDataIT::Group_nstud(input_nstud_19, Year = 2019, input_Registry = Registry19)
-teachers4stud19 <- SchoolDataIT::Group_teachers4stud(Year = 2019,
-                                                     input_nteachers = nteachers_19,
-                                                     input_nstud_raw = input_nstud_19)
-write.csv(nstud19$Municipality_data, file = "Students counts/nstud19.csv", row.names = FALSE)
+#teachers4stud19 <- SchoolDataIT::Group_teachers4stud(Year = 2019,
+#                                                     input_nteachers = nteachers_19,
+#                                                     input_nstud_raw = input_nstud_19)
+#write.csv(nstud19$Municipality_data, file = "Students counts/nstud19.csv", row.names = FALSE)
 
 
 ##' 2020/21 data ---------------------------------------------------------------
 
 input_nstud_21 <- SchoolDataIT::Get_nstud(Year = 2021)
-if(!exists("Registry21")) Registry21 <- SchoolDataIT::Get_Registry(2021)
+#if(!exists("Registry21")) Registry21 <- SchoolDataIT::Get_Registry(2021)
 nteachers_21 <- SchoolDataIT::Get_nteachers_prov(Year = 2021)
 nstud21 <- SchoolDataIT::Group_nstud(input_nstud_21, Year = 2021, input_Registry = Registry21)
-teachers4stud21 <- SchoolDataIT::Group_teachers4stud(Year = 2021,
-                                                     input_nteachers = nteachers_21,
-                                                     input_nstud_raw = input_nstud_21)
-write.csv(nstud21$Municipality_data, file = "Students counts/nstud21.csv", row.names = FALSE)
+#teachers4stud21 <- SchoolDataIT::Group_teachers4stud(Year = 2021,
+#                                                     input_nteachers = nteachers_21,
+#                                                     input_nstud_raw = input_nstud_21)
+#write.csv(nstud21$Municipality_data, file = "Students counts/nstud21.csv", row.names = FALSE)
 
 ##' 2021/22 data ---------------------------------------------------------------
 
 input_nstud_22 <- SchoolDataIT::Get_nstud(Year = 2022)
 if(!exists("Registry22")) Registry22 <- SchoolDataIT::Get_Registry(2022)
-nteachers_22 <- SchoolDataIT::Get_nteachers_prov(Year = 2022)
+#nteachers_22 <- SchoolDataIT::Get_nteachers_prov(Year = 2022)
 nstud22 <- SchoolDataIT::Group_nstud(input_nstud_22, Year = 2022, input_Registry = Registry22)
-teachers4stud22 <- SchoolDataIT::Group_teachers4stud(Year = 2022,
-                                                     input_nteachers = nteachers_22,
-                                                     input_nstud_raw = input_nstud_22)
-write.csv(nstud22$Municipality_data, file = "Students counts/nstud22.csv", row.names = FALSE)
+#teachers4stud22 <- SchoolDataIT::Group_teachers4stud(Year = 2022,
+#                                                     input_nteachers = nteachers_22,
+#                                                     input_nstud_raw = input_nstud_22)
+#write.csv(nstud22$Municipality_data, file = "Students counts/nstud22.csv", row.names = FALSE)
 
 ##' 2022/23 data ---------------------------------------------------------------
 
 input_nstud_23 <- SchoolDataIT::Get_nstud(Year = 2023)
 if(!exists("Registry23")) Registry23 <- SchoolDataIT::Get_Registry(2023)
-nteachers_23 <- SchoolDataIT::Get_nteachers_prov(Year = 2023)
+#nteachers_23 <- SchoolDataIT::Get_nteachers_prov(Year = 2023)
 nstud23 <- SchoolDataIT::Group_nstud(input_nstud_23, Year = 2023, input_Registry = Registry23)
-teachers4stud23 <- SchoolDataIT::Group_teachers4stud(Year = 2023,
-                                                     input_nteachers = nteachers_23,
-                                                     input_nstud_raw = input_nstud_23)
-write.csv(nstud23$Municipality_data, file = "Students counts/nstud23.csv", row.names = FALSE)
+#teachers4stud23 <- SchoolDataIT::Group_teachers4stud(Year = 2023,
+#                                                     input_nteachers = nteachers_23,
+#                                                     input_nstud_raw = input_nstud_23)
+#write.csv(nstud23$Municipality_data, file = "Students counts/nstud23.csv", row.names = FALSE)
 
 ##' 2023/24 data ---------------------------------------------------------------
 
@@ -253,7 +253,7 @@ input_nstud_24 <- SchoolDataIT::Get_nstud(Year = 2024)
 if(!exists("Registry24")) Registry24 <- SchoolDataIT::Get_Registry(2024)
 School2mun24 <- SchoolDataIT::Get_School2mun(2023, input_Registry = Registry24)
 nstud24 <- SchoolDataIT::Group_nstud(input_nstud_24, Year = 2023, input_School2mun = School2mun24)
-write.csv(nstud24$Municipality_data, file = "Students counts/nstud24.csv", row.names = FALSE)
+#write.csv(nstud24$Municipality_data, file = "Students counts/nstud24.csv", row.names = FALSE)
 
 ## join ------------------------------------------------------------------------
 
@@ -267,7 +267,7 @@ nstud <- dplyr::bind_rows(
   dplyr::mutate(nstud24$Municipality_data, Year = "202324")) %>% 
   dplyr::relocate(.data$Year, .before = 1)
 
-write.csv(nstud, file = "Students counts/nstud.csv", row.names = FALSE)
+write.csv(nstud, file = "Students counts/Classroom_size.csv", row.names = FALSE)
 
 
 # Invalsi data, useful for all years -------------------------------------------
