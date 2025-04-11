@@ -13,75 +13,164 @@
 #'  So, before running this code, ensure you have access to internet :)
 #'  
 #'  
-#'  ---------------------------------------------------------------------------#
-#'
+#'  
 #'
 ##' #--------------------------------------------------------------------------#
-##'         Shorter datasets - only school buildings                  
+##' #       Shorter datasets - only school buildings                  
 #'  #--------------------------------------------------------------------------#           
 ##' 2015/16 data ---------------------------------------------------------------
+#'
+#'  Key choice: maximum threshold of missing records per column.
+#'  Here we attept at: 10,000 for 2016 data, 5,000 for later years.
+#'
+InnerAreas <- SchoolDataIT::Get_InnerAreas()
+
 Registry16 <- SchoolDataIT::Get_Registry(2016)
 input_DB16_MIUR <- SchoolDataIT::Get_DB_MIUR(2016, 
                                              input_Registry = Registry16, 
                                              certifications = T)
-DB16_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB16_MIUR, InnerAreas  = FALSE, col_cut_thresh=1000)
-write.csv(DB16_MIUR$Municipality_data, file = "DB16_MIUR.csv", row.names = FALSE)
+DB16_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB16_MIUR, input_InnerAreas = InnerAreas,
+                                         col_cut_thresh=10000)
+
+#' There are some duplicate values. This deserves a more strict investigation.
+#' To solve the problem, we filter them out a priori.
+#' We need an if() condition to do this or we may end up with an empty DB
+#
+if(any(duplicated(dplyr::select(DB16_MIUR$Municipality_data, .data$Municipality_code, .data$Order)))){
+  DB16_MIUR$Municipality_data <- DB16_MIUR$Municipality_data[
+    -which(duplicated(dplyr::select(DB16_MIUR$Municipality_data, .data$Municipality_code, .data$Order))),]
+}
+
+#write.csv(DB16_MIUR$Municipality_data, file = "DB16_MIUR.csv", row.names = FALSE)
 
 ##' 2017/18 data ---------------------------------------------------------------
 Registry18 <- SchoolDataIT::Get_Registry(2018)
 input_DB18_MIUR <- SchoolDataIT::Get_DB_MIUR(2018, 
                                              input_Registry = Registry18, 
                                              certifications = T)
-DB18_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB18_MIUR, InnerAreas  = FALSE, col_cut_thresh = 1000)
-write.csv(DB18_MIUR$Municipality_data, file = "DB18_MIUR.csv", row.names = FALSE)
+DB18_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB18_MIUR, input_InnerAreas  = InnerAreas, 
+                                         col_cut_thresh = 5000)
+#' Duplicates issue. For 2018 I don't think
+#' it is necessary, still it does not cost anything
+if(any(duplicated(dplyr::select(DB18_MIUR$Municipality_data, .data$Municipality_code, .data$Order)))){
+  DB18_MIUR$Municipality_data <- DB18_MIUR$Municipality_data[
+    -which(duplicated(dplyr::select(DB18_MIUR$Municipality_data, .data$Municipality_code, .data$Order))),]
+}
+
+#write.csv(DB18_MIUR$Municipality_data, file = "DB18_MIUR.csv", row.names = FALSE)
+
 ##' 2018/19 data ---------------------------------------------------------------
 Registry19 <- SchoolDataIT::Get_Registry(2019)
 input_DB19_MIUR <- SchoolDataIT::Get_DB_MIUR(2019, 
                                              input_Registry = Registry19, 
                                              certifications = T)
-DB19_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB19_MIUR, InnerAreas  = FALSE, col_cut_thresh = 1000)
-write.csv(DB19_MIUR$Municipality_data, file = "DB19_MIUR.csv", row.names = FALSE)
+DB19_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB19_MIUR, input_InnerAreas  = InnerAreas, 
+                                         col_cut_thresh = 5000)
+
+#' Duplicates issue, as for 2016 data. This time it's necessary
+if(any(duplicated(dplyr::select(DB19_MIUR$Municipality_data, .data$Municipality_code, .data$Order)))){
+  DB19_MIUR$Municipality_data <- DB19_MIUR$Municipality_data[
+    -which(duplicated(dplyr::select(DB19_MIUR$Municipality_data, .data$Municipality_code, .data$Order))),]
+}
+
+#write.csv(DB19_MIUR$Municipality_data, file = "DB19_MIUR.csv", row.names = FALSE)
+
 ##' 2020/21 data ---------------------------------------------------------------
 Registry21 <- SchoolDataIT::Get_Registry(2021)
 input_DB21_MIUR <- SchoolDataIT::Get_DB_MIUR(2021, 
                                              input_Registry = Registry21, 
                                              certifications = T)
-DB21_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB21_MIUR, InnerAreas  = FALSE, col_cut_thresh = 1000)
-write.csv(DB21_MIUR$Municipality_data, file = "DB21_MIUR.csv", row.names = FALSE)
+DB21_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB21_MIUR, input_InnerAreas  = InnerAreas, 
+                                         col_cut_thresh = 5000)
+#write.csv(DB21_MIUR$Municipality_data, file = "DB21_MIUR.csv", row.names = FALSE)
+
 ##' 2021/22 data ---------------------------------------------------------------
 Registry22 <- SchoolDataIT::Get_Registry(2022)
 input_DB22_MIUR <- SchoolDataIT::Get_DB_MIUR(2022, 
                                              input_Registry = Registry22, 
                                              certifications = T)
-DB22_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB22_MIUR, InnerAreas  = FALSE, col_cut_thresh = 1000)
-write.csv(DB22_MIUR$Municipality_data, file = "DB22_MIUR.csv", row.names = FALSE)
+DB22_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB22_MIUR, input_InnerAreas  = InnerAreas, 
+                                         col_cut_thresh = 5000)
+#write.csv(DB22_MIUR$Municipality_data, file = "DB22_MIUR.csv", row.names = FALSE)
+
 ##' 2022/23 data ---------------------------------------------------------------
 Registry23 <- SchoolDataIT::Get_Registry(2023)
 input_DB23_MIUR <- SchoolDataIT::Get_DB_MIUR(2023, 
                                              input_Registry = Registry23, 
                                              certifications = T)
-DB23_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB23_MIUR, InnerAreas  = FALSE, col_cut_thresh = 1000)
-write.csv(DB23_MIUR$Municipality_data, file = "DB23_MIUR.csv", row.names = FALSE)
+DB23_MIUR <- SchoolDataIT::Group_DB_MIUR(input_DB23_MIUR, input_InnerAreas  = InnerAreas, 
+                                         col_cut_thresh = 5000)
+#write.csv(DB23_MIUR$Municipality_data, file = "DB23_MIUR.csv", row.names = FALSE)
 #'  
-#'  
-#'  
-#'  
-#'         
 ##' join -----------------------------------------------------------------------
 
-DB_MIUR <- dplyr::bind_rows(DB16_MIUR$Municipality_data, 
-                            DB18_MIUR$Municipality_data, 
-                            DB19_MIUR$Municipality_data,
-                            DB21_MIUR$Municipality_data,
-                            DB22_MIUR$Municipality_data,
-                            DB23_MIUR$Municipality_data)
+
+
+
+DBs_MIUR <- list(DB16_MIUR$Municipality_data, 
+                 DB18_MIUR$Municipality_data, 
+                 DB19_MIUR$Municipality_data,
+                 DB21_MIUR$Municipality_data,
+                 DB22_MIUR$Municipality_data,
+                 DB23_MIUR$Municipality_data)
+#' Let us consider the proportion of missing records per municipality.
+if(!"Year" %in% names(DB16_MIUR$Municipality_missing)){
+  DB16_MIUR$Municipality_missing$Year <- DB16_MIUR$Municipality_data$Year[1]
+}
+if(!"Year" %in% names(DB16_MIUR$Municipality_missing)){
+  DB18_MIUR$Municipality_missing$Year <- DB18_MIUR$Municipality_data$Year[1]
+}
+if(!"Year" %in% names(DB16_MIUR$Municipality_missing)){
+  DB19_MIUR$Municipality_missing$Year <- DB19_MIUR$Municipality_data$Year[1]
+}
+if(!"Year" %in% names(DB16_MIUR$Municipality_missing)){
+  DB21_MIUR$Municipality_missing$Year <- DB21_MIUR$Municipality_data$Year[1]
+}
+if(!"Year" %in% names(DB16_MIUR$Municipality_missing)){
+  DB22_MIUR$Municipality_missing$Year <- DB22_MIUR$Municipality_data$Year[1]
+}
+if(!"Year" %in% names(DB16_MIUR$Municipality_missing)){
+  DB23_MIUR$Municipality_missing$Year <- DB23_MIUR$Municipality_data$Year[1]
+}
+
+
+
+
+DB_MIUR_MP <- dplyr::bind_rows(DB16_MIUR$Municipality_missing, 
+                            DB18_MIUR$Municipality_missing, 
+                            DB19_MIUR$Municipality_missing,
+                            DB21_MIUR$Municipality_missing,
+                            DB22_MIUR$Municipality_missing,
+                            DB23_MIUR$Municipality_missing)
+
+
+common_cols <- Reduce(intersect, lapply(DBs_MIUR, names))
+
+#' This is a very, very strict selection. Only rows included in all SIX 
+#' dataframes are taken into the final one.
+DBs_MIUR_reduced<- lapply(DBs_MIUR, function(X) dplyr::select(X, common_cols))
+
+DB_MIUR.L <- dplyr::bind_rows(DBs_MIUR_reduced)
+
+#' Let us include the missing proportions. Of all fields?
+#' Of course not: only of the fields of DB_MIUR.L
+DB_MIUR_MP.R <- DB_MIUR_MP %>% dplyr::select(
+  which(sapply(names(DB_MIUR_MP), function(x) {
+    any(sapply(common_cols, function (y) grepl(y, x)))
+    }))) %>% 
+  dplyr::select( -.data$nbuildings_MP)
+
+DB_MIUR <- dplyr::left_join(DB_MIUR.L, DB_MIUR_MP.R,
+                            by = c("Municipality_code", "Year", "Order"))
+
+
 write.csv(DB_MIUR, file = "DB_SchoolBuildings.csv", row.names = FALSE)
 
 
 # BLANK field track - FILLED IN MANUALLY VIA EXCEL
 #write.csv(data.frame(sort(names(DB_MIUR))), file = "field_track_MIUR.csv", row.names = FALSE)
 
-##' #---------------------------------------------------------------------------
+##' #--------------------------------------------------------------------------#
 ##'         Shorter datasets - only students counts                  
 #'  #--------------------------------------------------------------------------#    
 #'  
@@ -193,7 +282,7 @@ Invalsi_wide <- SchoolDataIT::Util_Invalsi_filter(input_Invalsi_mun,
 write.csv(Invalsi_wide, file = "Invalsi/DB_Invalsi.csv", row.names = FALSE)
 
 
-##' #--------------------------------------------------------------------------
+##' #--------------------------------------------------------------------------#
 #'  #              Complete datasets                                           #
 #'  #--------------------------------------------------------------------------#           
 #'
