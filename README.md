@@ -26,8 +26,14 @@ devtools::install_github("lcef97/SchoolDataIT", upgrade = "never")
 #### School buildings
 Database of school infrastructure, as provided by the
 [Ministry](https://dati.istruzione.it/opendata/opendata/catalogo/elements1/?area=Edilizia%20Scolastica).
-Covers school years 2015/16, 2017/18, 2018/19, 2020/21, 2021/22 and 2022/23. In order to keep high data quality standards, 
-only variables with 1000 or less missing filters have been selected. School data are aggregated at the LAU/municipality level.
+This database regards various material and infrastructural aspects such as the availability of public or private transport or the intended use of physical
+spaces. Observations are detailed at the level of physical school buildings. 
+The temporal dimension covers school years 2015/16, 2017/18, 2018/19, 2020/21, 2021/22 and 2022/23.
+Most variables are Boolean, indicating whether a given feature occurs in a school building or not. 
+To keep relatively high data quality standards, the fields with more than 10,000 (2016) or 5,000 (other years) record are filtered out.
+School data are aggregated at the LAU/municipality level.
+Please, refer to the [DB generating file](https://github.com/lcef97/AMELIA_datasets/blob/main/DB%20generator.R), which explains
+in detail how this and other DBs are defined. 
 
 #### Students counts/classroom size
 Average classroom size, students counts and classrooms counts for municipalities, covering school years from 2016 to 2024

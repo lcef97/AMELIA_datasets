@@ -117,19 +117,19 @@ DBs_MIUR <- list(DB16_MIUR$Municipality_data,
 if(!"Year" %in% names(DB16_MIUR$Municipality_missing)){
   DB16_MIUR$Municipality_missing$Year <- DB16_MIUR$Municipality_data$Year[1]
 }
-if(!"Year" %in% names(DB16_MIUR$Municipality_missing)){
+if(!"Year" %in% names(DB18_MIUR$Municipality_missing)){
   DB18_MIUR$Municipality_missing$Year <- DB18_MIUR$Municipality_data$Year[1]
 }
-if(!"Year" %in% names(DB16_MIUR$Municipality_missing)){
+if(!"Year" %in% names(DB19_MIUR$Municipality_missing)){
   DB19_MIUR$Municipality_missing$Year <- DB19_MIUR$Municipality_data$Year[1]
 }
-if(!"Year" %in% names(DB16_MIUR$Municipality_missing)){
+if(!"Year" %in% names(DB21_MIUR$Municipality_missing)){
   DB21_MIUR$Municipality_missing$Year <- DB21_MIUR$Municipality_data$Year[1]
 }
-if(!"Year" %in% names(DB16_MIUR$Municipality_missing)){
+if(!"Year" %in% names(DB22_MIUR$Municipality_missing)){
   DB22_MIUR$Municipality_missing$Year <- DB22_MIUR$Municipality_data$Year[1]
 }
-if(!"Year" %in% names(DB16_MIUR$Municipality_missing)){
+if(!"Year" %in% names(DB23_MIUR$Municipality_missing)){
   DB23_MIUR$Municipality_missing$Year <- DB23_MIUR$Municipality_data$Year[1]
 }
 
