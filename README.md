@@ -51,13 +51,16 @@ Please, refer to the [DB generating file](https://github.com/lcef97/AMELIA_datas
 in detail how this and other DBs are defined. 
 
 #### Invalsi municipality data
-Municipality-level results of the Invalsi censuary survey. 
-Here, we limit ourselves to structuring the Invalsi database as published by the Invalsi institute itseld
+Municipality-level results of the Invalsi censuary survey, regarding four subjects (Italian, Mathematics, English Reading, English Speaking), 
+and five school grades overall: second and last year of primary school, last year of middle school and second and last year of high shcool.
+Here, we limit ourselves to structuring the Invalsi database as
+[published](https://serviziostatistico.invalsi.it/en/invalsi_ss_data/punteggi-e-percentuale-di-studenti-nei-livelli-di-competenza-per-ripartizioni-territoriali-e-caratteristiche-di-contesto/) by the Invalsi institute itself)
+by the Invalsi institute itself
 into a wide format, in order to have municipalities as observation units. 
 NA values mean that Invalsi scores for a given school grade are not published for a given municipality.
 This may be happen either if that municipalities has no schools of the relevant order, or if it only has one school of the relevant order; 
 in this case though the average Invalsi score exists, the Institute does not publish it for privacy reasons. 
 It is possible to refer to the [DB generating file](https://github.com/lcef97/AMELIA_datasets/blob/main/DB%20generator.R), which shows
-in detail how this and other DBs are defined. 
+in detail how this and other DBs are defined, though as previously mentioned we do not perform any significant data editing operation.
 
 
